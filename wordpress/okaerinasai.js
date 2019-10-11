@@ -93,21 +93,21 @@ var encode = document.getElementById('encode'),
     output = document.getElementById('output'),
     input = document.getElementById('input');
 var User_ID = "";
-var okaerinasai_include = "";
+var protected_links = "";
 var a_to_va = 0;
 var a_to_vb = 0;
 var a_to_vc = "";
 
-function run_okaerinasai() {
-    okaerinasai.run();
+function auto_safelink() {
+    auto_safeconvert();
 }
 
-function okaerinasai.run() {
+function auto_safeconvert() {
     var a_to_vd = window.location.hostname;
-    if (okaerinasai_include != "" && !okaerinasai_include.match(a_to_vd)) {
-        okaerinasai_include += ", " + a_to_vd;
-    } else if (okaerinasai_include == "") {
-        okaerinasai_include = a_to_vd;
+    if (protected_links != "" && !protected_links.match(a_to_vd)) {
+        protected_links += ", " + a_to_vd;
+    } else if (protected_links == "") {
+        protected_links = a_to_vd;
     }
     var a_to_ve = "";
     var a_to_vf = new Array();
@@ -149,7 +149,7 @@ function okaerinasai.run() {
 
 function a_to_fa() {
     var a_to_vf = new Array();
-    okaerinasai_include = okaerinasai_include.replace(" ", "");
-    a_to_vf = okaerinasai_include.split(",");
+    protected_links = protected_links.replace(" ", "");
+    a_to_vf = protected_links.split(",");
     return a_to_vf;
 }
