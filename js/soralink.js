@@ -17,7 +17,7 @@ soralink.commaToArray = function(str){
 }
  
 soralink.buildLink = function(href){
-    return soralink.me() + '?secure=' + btoa(href);
+    return soralink.me() + '?r=' + btoa(href);
 }
 soralink.in = function(needle, sourceArray){
     var inside = sourceArray.filter(function(e){
