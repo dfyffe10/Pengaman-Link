@@ -4,8 +4,8 @@ var soralink = {
 }
 soralink.rmProtocol = function(href) {
     var result = href;
-    if (href.indexOf('https://') === 0) result = href.replace("https://", "");
-    if (href.indexOf('http://') === 0) result = href.replace("http://", "");
+    if (href.indexOf('http://') === 0) result = href.replace("https://", "");
+    if (href.indexOf('https://') === 0) result = href.replace("http://", "");
     if (href.indexOf('//') === 0) result = href.replace("//", "");
     return result;
 }
